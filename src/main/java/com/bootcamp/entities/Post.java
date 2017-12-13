@@ -1,8 +1,8 @@
 package com.bootcamp.entities;
 
 import com.bootcamp.commons.annotations.NativeQueryResultColumn;
-import com.bootcamp.enums.StatutPost;
-import com.bootcamp.enums.TypePost;
+import com.bootcamp.commons.enums.StatutPost;
+import com.bootcamp.commons.enums.TypePost;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
