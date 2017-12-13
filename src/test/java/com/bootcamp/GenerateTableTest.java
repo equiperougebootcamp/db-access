@@ -6,7 +6,8 @@ import org.testng.annotations.Test;
 import javax.persistence.Persistence;
 import java.util.Properties;
 
-import static com.bootcamp.constants.DatabaseConstants.PERSISTENCE_UNIT;
+import static com.bootcamp.commons.constants.DatabaseConstants.PERSISTENCE_UNIT;
+
 
 /**
  * Created by groupeRouge on 9/22/17.

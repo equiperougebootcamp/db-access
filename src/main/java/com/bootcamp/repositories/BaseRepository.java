@@ -6,11 +6,8 @@ import com.bootcamp.commons.exceptions.DatabaseException;
 import com.bootcamp.commons.models.Criterias;
 import com.bootcamp.commons.utils.NativeQueryResultsMapper;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
 
