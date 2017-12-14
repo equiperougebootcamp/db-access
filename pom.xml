@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.bootcamp</groupId>
+    <groupId>com.bootcamp.agroppm</groupId>
     <artifactId>db-access</artifactId>
     <packaging>jar</packaging>
     <version>1.2</version>
@@ -15,9 +15,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.bootcamp</groupId>
+            <groupId>com.bootcamp.agroppm</groupId>
             <artifactId>commons</artifactId>
-            <version>1.2</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -60,6 +60,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <config.home>${user.home}/config/dev</config.home>
     </properties>
     <distributionManagement>
         <repository>
@@ -85,7 +86,7 @@
                         <filtering>true</filtering>
                     </resource>
                     <resource>
-                        <directory>src/main/resources/local</directory>
+                        <directory>${config.home}</directory>
                     </resource>
 
                 </resources>
@@ -102,7 +103,7 @@
                         <filtering>true</filtering>
                     </resource>
                     <resource>
-                        <directory>src/main/resources/dev</directory>
+                        <directory>${config.home}</directory>
                     </resource>
 
                 </resources>
@@ -147,12 +148,6 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <!-- MainClass in mainfest make a executable jar -->
-                    <!--<archive>-->
-                        <!--<manifest>-->
-                            <!--<mainClass>com.mkyong.core.utils.App</mainClass>-->
-                        <!--</manifest>-->
-                    <!--</archive>-->
 
                 </configuration>
                 <executions>

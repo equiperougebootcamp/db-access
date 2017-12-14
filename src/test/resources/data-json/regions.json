@@ -3,7 +3,15 @@
     "ville": "ville 1",
     "quartier": "quartier 1",
     "commune": "commune 1",
-    "departement": "departement 1",
+    "departement": "Littoral",
+    "longitude": 35435,
+    "latitude": 45876
+  },
+  {
+    "ville": "ville 1",
+    "quartier": "quartier 1",
+    "commune": "commune 1",
+    "departement": "Alibori",
     "longitude": 0,
     "latitude": 0
   },
@@ -11,56 +19,48 @@
     "ville": "ville 1",
     "quartier": "quartier 1",
     "commune": "commune 1",
-    "departement": "departement 1",
-    "longitude": 0,
-    "latitude": 0
+    "departement": "Donga",
+    "longitude": 35435,
+    "latitude": 45876
+  },
+  {
+    "ville": "ville 1",
+    "quartier": "quartier 1",
+    "commune": "commune 1",
+    "departement": "Plateau",
+    "longitude": 12587,
+    "latitude": 78965
+  },
+  {
+    "ville": "ville 1",
+    "quartier": "quartier 1",
+    "commune": "commune 1",
+    "departement": "Couffo",
+    "longitude": 35435,
+    "latitude": 45876
   },
   {
     "ville": "ville 1",
     "quartier": "quartier 1",
     "commune": "commune 1",
     "departement": "departement 1",
-    "longitude": 0,
-    "latitude": 0
+    "longitude": 12587,
+    "latitude": 78965
   },
   {
     "ville": "ville 1",
     "quartier": "quartier 1",
     "commune": "commune 1",
     "departement": "departement 1",
-    "longitude": 0,
-    "latitude": 0
+    "longitude": 35435,
+    "latitude": 45876
   },
   {
     "ville": "ville 1",
     "quartier": "quartier 1",
     "commune": "commune 1",
-    "departement": "departement 1",
-    "longitude": 0,
-    "latitude": 0
-  },
-  {
-    "ville": "ville 1",
-    "quartier": "quartier 1",
-    "commune": "commune 1",
-    "departement": "departement 1",
-    "longitude": 0,
-    "latitude": 0
-  },
-  {
-    "ville": "ville 1",
-    "quartier": "quartier 1",
-    "commune": "commune 1",
-    "departement": "departement 1",
-    "longitude": 0,
-    "latitude": 0
-  },
-  {
-    "ville": "ville 1",
-    "quartier": "quartier 1",
-    "commune": "commune 1",
-    "departement": "departement 1",
-    "longitude": 0,
-    "latitude": 0
+    "departement": "Collines",
+    "longitude": 12587,
+    "latitude": 78965
   }
 ]
