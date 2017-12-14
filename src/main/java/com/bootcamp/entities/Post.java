@@ -47,15 +47,28 @@ public class Post implements Serializable {
     @Column(nullable = false)
     private int produitId;
 
+    @ApiModelProperty(value = " description   of the post")
+    @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
+    @Column
+    private String description;
+
     @ApiModelProperty(value = "postulant id   of the post")
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     @Column(nullable = false)
     private List<Integer> postulantId;
 
-    @ApiModelProperty(value = "The region of post", required = true)
+    @ApiModelProperty(value = "The region of post", required = false)
     @JoinColumn(name = "region", referencedColumnName = "id", insertable = false, updatable = false)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.COMPLEX)
     private Region region;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public int getId() {
         return id;

@@ -28,10 +28,10 @@ public class Produit implements Serializable {
     @Column(nullable = false)
     private String typeProduit;
 
-    @ManyToMany(mappedBy = "produit")
-    @Basic(fetch = FetchType.LAZY, optional = false)
-    @ApiModelProperty(value = "List of users id of the product", required = true)
-    private List<User> users;
+
+    @Column
+    @ApiModelProperty(value = "List of users id of the product", required = false)
+    private List<Integer> usersId;
 
     public int getId() {
         return id;
@@ -57,11 +57,11 @@ public class Produit implements Serializable {
         this.typeProduit = typeProduit;
     }
 
-    public List<User> getUsers() {
-        return users;
+    public List<Integer> getUsersId() {
+        return usersId;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
+    public void setUsersId(List<Integer> usersId) {
+        this.usersId = usersId;
     }
 }

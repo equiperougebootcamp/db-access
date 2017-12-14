@@ -5,6 +5,7 @@
 package com.bootcamp.entities;
 
 import com.bootcamp.commons.annotations.NativeQueryResultColumn;
+import com.bootcamp.enums.TypeUser;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
@@ -24,23 +25,28 @@ public class User {
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     private String prenom;
 
-    @Column(nullable = false, length = 1024)
+    @Column(nullable = false)
     @ApiModelProperty(value = "Contact of the User", required = true)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     private String contact;
 
-    @Column(nullable = false, length = 1024)
+    @Column(nullable = false)
     @ApiModelProperty(value = "Password of the User", required = true)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     private String password;
 
-    @Column(nullable = false, length = 1024)
+    @Column(nullable = false)
     @ApiModelProperty(value = "name of the User", required = true)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     private String nom;
 
-    @Column(nullable = false, length = 1024)
-    @ApiModelProperty(value = "email of the User", required = true)
+    @Column(nullable = false)
+    @ApiModelProperty(value = "type of the User", required = true)
+    @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
+    private TypeUser typeUser = TypeUser.USER;
+
+    @Column(nullable = false)
+    @ApiModelProperty(value = "email of the User", required = false)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     private String email;
 
@@ -56,13 +62,42 @@ public class User {
 
     @ManyToMany
     @Basic(fetch = FetchType.LAZY, optional = false)
-    @ApiModelProperty(value = "list of products ", required = true)
+    @ApiModelProperty(value = "list of products ", required = false)
     private List<Produit> produits;
+
+    @Column
+    @ApiModelProperty(value = "id List  of the User posts", required = false)
+    @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
+    private List<Integer> posts;
 
     @ApiModelProperty(value = "The region of user", required = true)
     @JoinColumn(name = "region", referencedColumnName = "id", insertable = false, updatable = false)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.COMPLEX)
     private Region region;
+
+    public TypeUser getTypeUser() {
+        return typeUser;
+    }
+
+    public void setTypeUser(TypeUser typeUser) {
+        this.typeUser = typeUser;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<Integer> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Integer> posts) {
+        this.posts = posts;
+    }
 
     public int getId() {
         return id;
