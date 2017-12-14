@@ -16,16 +16,15 @@ public class Produit implements Serializable {
     @ApiModelProperty(value = "Id of the product", notes = "This id is automatically generated ,it doesn't required")
     private int id;
 
-    @Lob
-    @Basic(fetch = FetchType.LAZY, optional = false)
-    @Column(nullable = false, length = 1024)
+
+    @Column(nullable = false)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     @ApiModelProperty(value = "name of the product", required = true)
     private String designation;
 
     @ApiModelProperty(value = "note  of the post")
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
-    @Column(nullable = false)
+    @Column
     private String typeProduit;
 
 
