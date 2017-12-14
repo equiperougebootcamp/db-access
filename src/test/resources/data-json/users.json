@@ -1,0 +1,26 @@
+[
+  {
+    "nom": "DOSSOU",
+    "prenom": "Israel",
+    "contact": "97326358",
+    "password": "iso-doss",
+    "email": "dossou.israel48@gmail.com",
+    "dateMiseAJour": 14122017
+  },
+  {
+    "nom": "ADJADO",
+    "prenom": "Aremou",
+    "contact": "97789632",
+    "password": "aremou",
+    "email": "ADJADO.Aremou@gmail.com",
+    "dateMiseAJour": 14122017
+  },
+  {
+    "nom": "ABLADON",
+    "prenom": "Ibrahim",
+    "contact": "97451236",
+    "password": "Ibrahim",
+    "email": "ABLADON.Ibrahim@gmail.com",
+    "dateMiseAJour": 14122017
+  }
+]
