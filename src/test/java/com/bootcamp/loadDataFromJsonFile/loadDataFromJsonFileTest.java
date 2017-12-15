@@ -78,7 +78,6 @@ public class loadDataFromJsonFileTest {
         Region region = regionRepository.findById(1);
         for (int i = 0; i < users.size(); i++) {
             User get = users.get(i);
-            get.setRegion(region);
             userRepository.create(get);
         }
     }

@@ -70,10 +70,6 @@ public class User {
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     private List<Integer> posts;
 
-    @ApiModelProperty(value = "The region of user", required = true)
-    @JoinColumn(name = "region", referencedColumnName = "id", insertable = false, updatable = false)
-    @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.COMPLEX)
-    private Region region;
 
     public TypeUser getTypeUser() {
         return typeUser;
@@ -163,11 +159,5 @@ public class User {
         this.produits = produits;
     }
 
-    public Region getRegion() {
-        return region;
-    }
 
-    public void setRegion(Region region) {
-        this.region = region;
-    }
 }
