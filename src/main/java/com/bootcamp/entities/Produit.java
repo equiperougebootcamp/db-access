@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,7 +27,6 @@ public class Produit implements Serializable {
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     @Column
     private String typeProduit;
-
 
     @Column
     @ApiModelProperty(value = "List of users id of the product", required = false)

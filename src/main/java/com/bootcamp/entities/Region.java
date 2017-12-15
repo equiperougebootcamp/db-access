@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -48,9 +49,8 @@ public class Region implements Serializable {
     @ApiModelProperty(value = "The latitude of the region", required = true)
     private long latitude;
 
-    @OneToMany
-    private List<Post> posts;
-
+    @ManyToMany
+    private List<Post> posts = new ArrayList<>();
 
     public int getId() {
         return id;

@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -57,11 +58,8 @@ public class Post implements Serializable {
     @Column(nullable = false)
     private List<Integer> postulantId;
 
-    @ManyToOne
-    @ApiModelProperty(value = "The region of the post", required = true)
-    @JoinColumn(name = "region", referencedColumnName = "id", insertable = false, updatable = false)
-    @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.COMPLEX)
-    private Region region;
+    @ManyToMany(mappedBy = "posts")
+    private List<Region> regions = new ArrayList<Region>();
 
     public String getDescription() {
         return description;
@@ -135,11 +133,5 @@ public class Post implements Serializable {
         this.postulantId = postulantId;
     }
 
-    public Region getRegion() {
-        return region;
-    }
 
-    public void setRegion(Region region) {
-        this.region = region;
-    }
 }
