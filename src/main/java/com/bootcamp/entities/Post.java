@@ -57,7 +57,8 @@ public class Post implements Serializable {
     @Column(nullable = false)
     private List<Integer> postulantId;
 
-    @ApiModelProperty(value = "The region of post", required = false)
+    @ManyToOne
+    @ApiModelProperty(value = "The region of the post", required = true)
     @JoinColumn(name = "region", referencedColumnName = "id", insertable = false, updatable = false)
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.COMPLEX)
     private Region region;

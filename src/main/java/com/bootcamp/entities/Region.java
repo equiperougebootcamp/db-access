@@ -5,7 +5,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @ApiModel(value = "Region", description = "Description of region service")
@@ -45,6 +47,9 @@ public class Region implements Serializable {
     @NativeQueryResultColumn(columnType = NativeQueryResultColumn.COLUMNTYPE.SIMPLE)
     @ApiModelProperty(value = "The latitude of the region", required = true)
     private long latitude;
+
+    @OneToMany
+    private List<Post> posts;
 
 
     public int getId() {
